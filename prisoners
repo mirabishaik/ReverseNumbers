@@ -1,0 +1,11 @@
+public class PrisonerWarning {
+    public void printPrisonerToWarn(int n, int m, int s) {
+        int position = ((s - 1) + (m - 1)) % n + 1;
+        System.out.println(position);
+}
+    public static void main(String[] args) {
+        PrisonerWarning pw = new PrisonerWarning();
+        pw.printPrisonerToWarn(5, 2, 1); 
+        pw.printPrisonerToWarn(5, 2, 2);  
+}
+}
