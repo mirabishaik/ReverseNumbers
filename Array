@@ -1,0 +1,19 @@
+import java.util.HashSet;
+public class SumChecker {
+    public boolean isThereASum(int[] arr, int t) {
+        HashSet<Integer> seen = new HashSet<>();
+        for (int num : arr) {
+            int complement = t - num;
+            if (seen.contains(complement)) {
+                return true;  
+}
+            seen.add(num);  
+
+}
+        return false; 
+}
+    public static void main(String[] args) {
+        SumChecker checker = new SumChecker();
+        int[] arr1 = {0, 1, 2, 3, -3};
+        int t1 = -2;
+        System.out.println(checker.isThereASum(arr1, t1));
